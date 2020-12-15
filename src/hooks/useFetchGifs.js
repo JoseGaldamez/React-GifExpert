@@ -9,7 +9,6 @@ export default function useFetchGifs (category) {
             
             
             setTimeout(() => {
-                console.log(imgs);
                 setstate({ data: imgs, loading: false });
             }, 1000);
         })
