@@ -22,7 +22,7 @@ const AddCategory = ({setCategories}) => {
     }
     return (
         <form onSubmit={_handleSubmit}>
-            <input type="text" value={inputValue} onChange={_handleInputChange} />
+            <input placeholder="Buscar..." type="text" value={inputValue} onChange={_handleInputChange} />
         </ form>
     );
 }
