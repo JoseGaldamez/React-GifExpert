@@ -13,11 +13,12 @@ export const GifGrid = ({ category }) => {
             { loading && <p className="animate__animated animate__flash">Cargando...</p> }
             
         <div className="card-grid">
-            {images.map((img) => {
-               return (
-                         <GifGridItem key={img.id} {...img} />
-                      )
-               })
+            { 
+            images.length != 0
+                ? images.map((img) => {
+                        return ( <GifGridItem key={img.id} {...img} /> )
+                    })
+                : !loading && <p>No se encontraron gifs con este título</p>
            }
         </div>
         </>

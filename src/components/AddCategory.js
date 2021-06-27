@@ -7,11 +7,13 @@ const AddCategory = ({setCategories}) => {
     const [inputValue, setinputValue] = useState('');
     const _handleInputChange = (e) => {
         setinputValue(e.target.value);
+
     }
     
     const _handleSubmit = (e) => {
-         
+        
         e.preventDefault();
+        console.log("Submit llamado...", inputValue);
         
         if (inputValue.trim().length > 2) {
             setCategories(cats => [inputValue, ...cats]);
@@ -31,6 +33,8 @@ const AddCategory = ({setCategories}) => {
 AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired
 }
+
+
 
 
 export default AddCategory;
