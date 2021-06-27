@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Probando GifGrid Analizando Snapshot 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Hola
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+    id="loading"
+  >
+    Cargando...
+  </p>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ABC"
+      key="ABC"
+      title="Cualquier cosa"
+      url="https://cualquiercos.com/algo.png"
+    />
+  </div>
+</Fragment>
+`;

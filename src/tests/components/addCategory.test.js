@@ -31,4 +31,19 @@ describe("Pruebas de AddCatergory", () => {
         expect(setCategories).not.toHaveBeenCalled();
     });
 
+    test("debe llamar Setcategory y limpiar la caja de texto", ()=>{
+        // simular el inputchange
+        const value = "Hola mundo";
+        wrapper.find('input').simulate('change', {target: {value}});
+        // simular el submit
+        wrapper.find('form').simulate('submit', {preventDefault(){}});
+        // se debe hacer llamado una vez el setCategory
+        expect(setCategories).toHaveBeenCalled();
+
+        // el valor del input debe estar vacio
+
+        expect(wrapper.find('input').prop('value') ).toBe('');
+
+    })
+
 });
